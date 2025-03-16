@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دوره‌های آموزشی | طراحی حرفه‌ای و بهینه</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* طراحی هدر */
+    .hero {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(70, 130, 180, 0.9)), url('https://via.placeholder.com/1920x1080') no-repeat center center;
+      background-size: cover;
+      height: 65vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    /* بخش فیلترها */
+    .filters {
+      padding: 2rem 1rem;
+      background-color: #f7f9fc;
+      border-radius: 8px;
+      margin: 2rem auto;
+      max-width: 90%;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .filters select {
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      width: 100%;
+      max-width: 200px;
+      margin: 0.5rem;
+    }
+
+    .filters button {
+      margin-top: 1rem;
+      padding: 0.8rem 2rem;
+      background-color: #4682b4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .filters button:hover {
+      background-color: #4169e1;
+    }
+
+    /* کارت دوره‌ها */
+    .course-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .course-card .content {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .course-card h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .course-card p {
+      font-size: 1rem;
+      color: #555;
+      margin: 0.5rem 0;
+    }
+
+    .course-card .actions a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.6rem 1.5rem;
+      background-color: #4682b4;
+      color: white;
+      border-radius: 8px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .course-card .actions a:hover {
+      background-color: #4169e1;
+    }
+
+    /* تنظیمات ریسپانسیو */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .filters {
+        padding: 1rem;
+      }
+
+      .course-card {
+        padding: 1rem;
+        margin: 0.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+
+      .course-card img {
+        height: 140px;
+      }
+
+      .course-card .content {
+        padding: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>دوره‌های آموزشی</h1>
+    <p>بهترین مسیر برای یادگیری و موفقیت</p>
+  </header>
+
+  <!-- Filters Section -->
+  <section class="filters text-center">
+    <h2 class="text-2xl font-bold mb-4">فیلتر دوره‌ها</h2>
+    <div class="flex flex-wrap justify-center gap-4">
+      <select>
+        <option value="all">همه دسته‌ها</option>
+        <option value="programming">برنامه‌نویسی</option>
+        <option value="design">طراحی</option>
+        <option value="marketing">بازاریابی</option>
+      </select>
+      <select>
+        <option value="all">همه سطوح</option>
+        <option value="beginner">مبتدی</option>
+        <option value="intermediate">متوسط</option>
+        <option value="advanced">پیشرفته</option>
+      </select>
+      <select>
+        <option value="all">همه مدت‌ها</option>
+        <option value="short">کمتر از 10 ساعت</option>
+        <option value="medium">10-40 ساعت</option>
+        <option value="long">بیش از 40 ساعت</option>
+      </select>
+      <button>اعمال فیلترها</button>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="container mx-auto py-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x180" alt="Python Course">
+        <div class="content">
+          <h3>برنامه‌نویسی پایتون</h3>
+          <p>سطح: مبتدی</p>
+          <p>مدت: 15 ساعت</p>
+          <div class="actions">
+            <a href="#">مشاهده جزئیات</a>
+          </div>
+        </div>
+      </div>
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x180" alt="Web Design Course">
+        <div class="content">
+          <h3>طراحی وب</h3>
+          <p>سطح: متوسط</p>
+          <p>مدت: 25 ساعت</p>
+          <div class="actions">
+            <a href="#">مشاهده جزئیات</a>
+          </div>
+        </div>
+      </div>
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x180" alt="Data Science Course">
+        <div class="content">
+          <h3>علم داده</h3>
+          <p>سطح: پیشرفته</p>
+          <p>مدت: 50 ساعت</p>
+          <div class="actions">
+            <a href="#">مشاهده جزئیات</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto text-center">
+      <p class="text-sm">تماس با ما: example@example.com</p>
+      <p class="text-sm mt-4 text-gray-400">طراحی شده توسط Microsoft Copilot</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

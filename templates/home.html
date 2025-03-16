@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سایت آموزشی | طراحی حرفه‌ای و جذاب</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* طراحی هدر */
+    .hero {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(59, 178, 115, 0.9)), url('https://via.placeholder.com/1920x1080') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+      margin: 0;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .hero-btn {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      background-color: #2563eb;
+      color: white;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-btn:hover {
+      background-color: #1e40af;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+
+    .card {
+      padding: 1.5rem;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    /* رفع اسکرول سمت راست */
+    body {
+      overflow-x: hidden;
+      margin: 0;
+    }
+
+    /* Media Queries برای بهبود ریسپانسیو */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .hero-btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+
+      .card-container {
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50 py-4">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <a href="#" class="text-3xl font-bold text-blue-500">آموزش آنلاین</a>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#features" class="text-gray-700 hover:text-blue-500">ویژگی‌ها</a></li>
+        <li><a href="#courses" class="text-gray-700 hover:text-blue-500">دوره‌ها</a></li>
+        <li><a href="#contact" class="text-gray-700 hover:text-blue-500">تماس با ما</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>آموزش آنلاین برای همه</h1>
+    <p>یادگیری مهارت‌های جدید برای موفقیت بیشتر</p>
+    <a href="#courses" class="hero-btn">شروع یادگیری</a>
+  </header>
+
+  <!-- Features Section -->
+  <section id="features" class="py-16 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">ویژگی‌های برجسته ما</h2>
+      <div class="card-container">
+        <div class="card" data-aos="fade-right">
+          <i class="fas fa-video fa-3x text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-bold">ویدیوهای آموزشی</h3>
+          <p>آموزش‌های کاربردی با کیفیت بالا و جزئیات کامل.</p>
+        </div>
+        <div class="card" data-aos="fade-up">
+          <i class="fas fa-certificate fa-3x text-green-500 mb-4"></i>
+          <h3 class="text-xl font-bold">مدارک معتبر</h3>
+          <p>مدارک حرفه‌ای که ارزش مهارت‌های شما را نشان می‌دهند.</p>
+        </div>
+        <div class="card" data-aos="fade-left">
+          <i class="fas fa-book fa-3x text-orange-500 mb-4"></i>
+          <h3 class="text-xl font-bold">منابع کامل</h3>
+          <p>دسترسی به منابع و محتوای متنوع آموزشی.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" class="py-24 bg-gray-50">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-8" data-aos="zoom-in">دوره‌های محبوب</h2>
+      <div class="card-container">
+        <div class="card" data-aos="zoom-in">
+          <img src="https://via.placeholder.com/300x200" alt="Python Course" class="w-full h-48 object-cover rounded-t-lg">
+          <div class="p-6">
+            <h3 class="text-lg font-bold">برنامه‌نویسی پایتون</h3>
+            <p>سطح: مبتدی | مدت زمان: ۳۰ ساعت</p>
+            <a href="#" class="mt-4 block bg-purple-500 text-white py-2 px-4 rounded-md hover:bg-purple-600">مشاهده جزئیات</a>
+          </div>
+        </div>
+        <div class="card" data-aos="zoom-in">
+          <img src="https://via.placeholder.com/300x200" alt="Web Design Course" class="w-full h-48 object-cover rounded-t-lg">
+          <div class="p-6">
+            <h3 class="text-lg font-bold">طراحی وب</h3>
+            <p>سطح: متوسط | مدت زمان: ۴۰ ساعت</p>
+            <a href="#" class="mt-4 block bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">مشاهده جزئیات</a>
+          </div>
+        </div>
+        <div class="card" data-aos="zoom-in">
+          <img src="https://via.placeholder.com/300x200" alt="Data Science Course" class="w-full h-48 object-cover rounded-t-lg">
+          <div class="p-6">
+            <h3 class="text-lg font-bold">علم داده</h3>
+            <p>سطح: پیشرفته | مدت زمان: ۵۰ ساعت</p>
+            <a href="#" class="mt-4 block bg-orange-500 text-white py-2 px-4 rounded-md hover:bg-orange-600">مشاهده جزئیات</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto text-center">
+      <p class="text-sm">تماس با ما: example@example.com</p>
+      <p class="text-sm mt-4 text-gray-400">طراحی شده توسط Microsoft Copilot</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // فعال کردن انیمیشن‌ها با AOS
+    AOS.init();
+  </script>
+</body>
+</html>

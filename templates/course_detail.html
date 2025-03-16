@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>جزئیات دوره | طراحی پیشرفته و حرفه‌ای</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9fafb;
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero {
+      background: linear-gradient(45deg, #ff8c00, #ffa07a);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .tabs button {
+      flex: 1;
+      padding: 0.8rem 1.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #555;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .tabs button.active {
+      background: linear-gradient(45deg, #4facfe, #00f2fe);
+      color: white;
+    }
+
+    .tab-content {
+      margin-top: 2rem;
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .videos h2, .reviews h2, .faq h2, .overview h2 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+
+    .accordion {
+      margin-top: 1.5rem;
+    }
+
+    .accordion-item {
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .accordion-item h3 {
+      background: #f9fafb;
+      padding: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .accordion-item h3:hover {
+      background: #f1f5f9;
+    }
+
+    .accordion-item ul {
+      display: none;
+      list-style: disc;
+      padding: 1rem;
+      padding-left: 2rem;
+    }
+
+    .accordion-item ul li {
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+
+    .review {
+      padding: 1rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .review h4 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #4facfe;
+      margin-bottom: 0.5rem;
+    }
+
+    .review p {
+      color: #555;
+    }
+
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .faq-item h3 {
+      font-size: 1.2rem;
+      cursor: pointer;
+      background: #f9fafb;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s;
+    }
+
+    .faq-item h3:hover {
+      background: #f1f5f9;
+    }
+
+    .faq-item p {
+      display: none;
+      margin-top: 0.5rem;
+      padding-left: 1.5rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>دوره برنامه‌نویسی پایتون</h1>
+    <p>سطح: مبتدی | مدت: 15 ساعت | مدرس: علی رضایی</p>
+    <p>قیمت: 200,000 تومان</p>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Tabs Section -->
+    <div class="tabs">
+      <button id="overview-tab" class="active">نمای کلی</button>
+      <button id="videos-tab">ویدیوها</button>
+      <button id="reviews-tab">نظرات</button>
+      <button id="faq-tab">سوالات متداول</button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="overview-content" class="tab-content active section-content overview">
+      <h2>درباره دوره</h2>
+      <p>دوره جامع برنامه‌نویسی پایتون تمامی مفاهیم لازم برای شروع به برنامه‌نویسی را شامل می‌شود. این دوره برای مبتدیان طراحی شده و از ابتدایی‌ترین مباحث شروع می‌کند.</p>
+      <ul>
+        <li>آشنایی با سینتکس پایتون</li>
+        <li>ساختارهای داده‌ای مثل لیست‌ها و دیکشنری‌ها</li>
+        <li>آموزش شرط‌ها و حلقه‌ها</li>
+        <li>کار با کتابخانه‌های معروف</li>
+      </ul>
+    </div>
+
+    <div id="videos-content" class="tab-content section-content videos">
+      <h2>فصل‌های ویدیویی</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <h3>فصل ۱: مقدمه <i class="fas fa-chevron-down"></i></h3>
+          <ul>
+            <li>آشنایی با پایتون</li>
+            <li>نصب محیط برنامه‌نویسی</li>
+            <li>اولین برنامه شما</li>
+          </ul>
+        </div>
+        <div class="accordion-item">
+          <h3>فصل ۲: ساختارهای داده‌ای <i class="fas fa-chevron-down"></i></h3>
+          <ul>
+            <li>متغیرها و انواع داده</li>
+            <li>لیست‌ها و دیکشنری‌ها</li>
+            <li>حلقه‌ها و شرط‌ها</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="reviews-content" class="tab-content section-content reviews">
+      <h2>نظرات دانشجویان</h2>
+      <div class="review">
+        <h4>محمد احمدی</h4>
+        <p>محتوا عالی بود و مدرس نکات کلیدی را به خوبی توضیح داد.</p>
+      </div>
+      <div class="review">
+        <h4>زهرا کریمی</h4>
+        <p>دوره‌ای جامع و کاربردی که همه مفاهیم پایه را پوشش می‌دهد.</p>
+      </div>
+    </div>
+
+    <div id="faq-content" class="tab-content section-content faq">
+      <h2>سوالات متداول</h2>
+      <div class="faq-item">
+        <h3>آیا برای این دوره پیش‌نیاز لازم است؟ <i class="fas fa-chevron-down"></i></h3>
+        <p>خیر، این دوره برای مبتدیان طراحی شده و نیازی به هیچ پیش‌نیازی ندارد.</p>
+      </div>
+      <div class="faq-item">
+        <h3>آیا گواهی پایان دوره دریافت می‌کنیم؟ <i class="fas fa-chevron-down"></i></h3>
+        <p>بله، پس از اتمام دوره شما یک گواهی معتبر دریافت خواهید کرد.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Tab Switching
+    const tabs = document.querySelectorAll(".tabs button");
+    const tabContents = document.querySelectorAll(".tab-content");
+  
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        // Remove active class from all tabs and contents
+        tabs.forEach(t => t.classList.remove("active"));
+        tabContents.forEach(content => content.classList.remove("active"));
+  
+        // Add active class to the clicked tab and corresponding content
+        tab.classList.add("active");
+        tabContents[index].classList.add("active");
+      });
+    });
+  
+    // Accordion Toggles for Videos and FAQ
+    const accordionItems = document.querySelectorAll(".accordion-item h3, .faq-item h3");
+  
+    accordionItems.forEach(accordion => {
+      accordion.addEventListener("click", () => {
+        const list = accordion.nextElementSibling;
+        const icon = accordion.querySelector("i");
+  
+        if (list.style.display === "block") {
+          // Hide the content and change icon to down arrow
+          list.style.display = "none";
+          icon.classList.remove("fa-chevron-up");
+          icon.classList.add("fa-chevron-down");
+        } else {
+          // Show the content and change icon to up arrow
+          list.style.display = "block";
+          icon.classList.remove("fa-chevron-down");
+          icon.classList.add("fa-chevron-up");
+        }
+      });
+    });
+  </script>
+  
+</body>
+</html>

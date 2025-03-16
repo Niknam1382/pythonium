@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ثبت‌نام و ورود | طراحی حرفه‌ای و متعادل</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .auth-container {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .tabs button {
+      background: none;
+      border: none;
+      color: #2563eb;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      transition: background 0.3s;
+    }
+
+    .tabs button.active {
+      background: #1e40af;
+      color: white;
+      border-radius: 8px;
+    }
+
+    .form-wrapper {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .form-wrapper.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .form-wrapper h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .form-wrapper input {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    .form-wrapper button {
+      width: 100%;
+      padding: 0.8rem;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .form-wrapper button:hover {
+      background: #1e40af;
+    }
+
+    .form-wrapper a {
+      display: block;
+      text-align: center;
+      margin-top: 1rem;
+      color: #2563eb;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .form-wrapper a:hover {
+      color: #1e40af;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="auth-container">
+    <!-- Tabs for toggling forms -->
+    <div class="tabs">
+      <button id="login-tab" class="active">ورود</button>
+      <button id="signup-tab">ثبت‌نام</button>
+    </div>
+
+    <!-- Login Form -->
+    <div id="login-form" class="form-wrapper active">
+      <h2>ورود به سیستم</h2>
+      <form action="#">
+        <input type="email" placeholder="ایمیل" required>
+        <input type="password" placeholder="رمز عبور" required>
+        <button type="submit">ورود</button>
+      </form>
+      <a href="#">فراموشی رمز عبور؟</a>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signup-form" class="form-wrapper">
+      <h2>ایجاد حساب کاربری</h2>
+      <form action="#">
+        <input type="text" placeholder="نام کامل" required>
+        <input type="email" placeholder="ایمیل" required>
+        <input type="password" placeholder="رمز عبور" required>
+        <button type="submit">ثبت‌نام</button>
+      </form>
+      <a href="#">قبلاً حساب دارید؟ وارد شوید</a>
+    </div>
+  </div>
+
+  <script>
+    // Toggle between Login and Signup
+    const loginTab = document.getElementById("login-tab");
+    const signupTab = document.getElementById("signup-tab");
+    const loginForm = document.getElementById("login-form");
+    const signupForm = document.getElementById("signup-form");
+
+    loginTab.addEventListener("click", () => {
+      loginTab.classList.add("active");
+      signupTab.classList.remove("active");
+      loginForm.classList.add("active");
+      signupForm.classList.remove("active");
+    });
+
+    signupTab.addEventListener("click", () => {
+      signupTab.classList.add("active");
+      loginTab.classList.remove("active");
+      signupForm.classList.add("active");
+      loginForm.classList.remove("active");
+    });
+  </script>
+</body>
+</html>

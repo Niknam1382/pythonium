@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پروفایل کاربر | وبلاگ حرفه‌ای</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: #2a4365;
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    header nav ul li a:hover {
+      color: #63b3ed;
+    }
+
+    .profile-header {
+      background: linear-gradient(to bottom right, #63b3ed, #2b6cb0);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .profile-header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 1rem;
+    }
+
+    .profile-header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .profile-header p {
+      font-size: 1rem;
+    }
+
+    .main-content {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .info-section,
+    .history-section {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .info-section h2,
+    .history-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #2a4365;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .info-item i {
+      font-size: 1.5rem;
+      color: #2b6cb0;
+    }
+
+    .history-item {
+      margin-bottom: 1rem;
+    }
+
+    .history-item h3 {
+      font-size: 1.4rem;
+      color: #2a4365;
+      margin-bottom: 0.5rem;
+    }
+
+    .history-item p {
+      font-size: 1rem;
+      color: #4a5568;
+    }
+
+    .edit-profile-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: #2b6cb0;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .edit-profile-btn:hover {
+      background: #1a365d;
+    }
+
+    footer {
+      background: #2a4365;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+
+    footer a {
+      color: #63b3ed;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">وبلاگ حرفه‌ای</div>
+    <nav>
+      <ul>
+        <li><a href="#">صفحه اصلی</a></li>
+        <li><a href="#">دسته‌بندی‌ها</a></li>
+        <li><a href="#">درباره ما</a></li>
+        <li><a href="#">تماس با ما</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Profile Header -->
+  <section class="profile-header">
+    <img src="https://via.placeholder.com/150" alt="Profile Picture">
+    <h1>محمد احمدی</h1>
+    <p>عضو از: فروردین 1404 | تعداد مقالات ارسال‌شده: 12</p>
+  </section>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Personal Info Section -->
+    <div class="info-section">
+      <h2>اطلاعات شخصی</h2>
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <p>ایمیل: mohammad@gmail.com</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-phone"></i>
+        <p>شماره تماس: 09123456789</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>موقعیت: تهران، ایران</p>
+      </div>
+      <a href="#" class="edit-profile-btn">ویرایش پروفایل</a>
+    </div>
+
+    <!-- History Section -->
+    <div class="history-section">
+      <h2>تاریخچه فعالیت‌ها</h2>
+      <div class="history-item">
+        <h3>مقاله: طراحی حرفه‌ای وبلاگ</h3>
+        <p>ارسال‌شده در: 15 فروردین 1404</p>
+      </div>
+      <div class="history-item">
+        <h3>مقاله: راهنمای بهینه‌سازی تجربه کاربری</h3>
+        <p>ارسال‌شده در: 10 فروردین 1404</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 تمامی حقوق محفوظ است.</p>
+    <p><a href="#">قوانین و شرایط</a> | <a href="#">تماس با ما</a></p>
+  </footer>
+</body>
+</html>

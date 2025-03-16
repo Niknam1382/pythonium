@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تماس با ما | وبلاگ حرفه‌ای</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: #2a4365;
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    header nav ul li a:hover {
+      color: #63b3ed;
+    }
+
+    .contact-header {
+      background: linear-gradient(to bottom right, #63b3ed, #2b6cb0);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .contact-header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-header p {
+      font-size: 1.1rem;
+    }
+
+    .main-content {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .contact-form {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-form h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #2a4365;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: #4a5568;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #4a5568;
+    }
+
+    .contact-form button {
+      background: #2b6cb0;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #1a365d;
+    }
+
+    .contact-info {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+    }
+
+    .contact-info h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #2a4365;
+    }
+
+    .contact-info p {
+      font-size: 1rem;
+      color: #4a5568;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info .info-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info .info-item i {
+      font-size: 1.5rem;
+      color: #2b6cb0;
+    }
+
+    footer {
+      background: #2a4365;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+
+    footer a {
+      color: #63b3ed;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">وبلاگ حرفه‌ای</div>
+    <nav>
+      <ul>
+        <li><a href="#">صفحه اصلی</a></li>
+        <li><a href="#">دسته‌بندی‌ها</a></li>
+        <li><a href="#">درباره ما</a></li>
+        <li><a href="#">تماس با ما</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Header -->
+  <section class="contact-header">
+    <h1>تماس با ما</h1>
+    <p>اگر سوال، پیشنهاد یا نظری دارید، می‌توانید از طریق فرم زیر یا اطلاعات تماس با ما در ارتباط باشید.</p>
+  </section>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2>فرم تماس</h2>
+      <form action="#">
+        <label for="name">نام شما:</label>
+        <input type="text" id="name" placeholder="نام خود را وارد کنید" required>
+        <label for="email">ایمیل:</label>
+        <input type="email" id="email" placeholder="ایمیل خود را وارد کنید" required>
+        <label for="message">پیام:</label>
+        <textarea id="message" rows="6" placeholder="پیام خود را اینجا بنویسید..." required></textarea>
+        <button type="submit">ارسال پیام</button>
+      </form>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="contact-info">
+      <h2>اطلاعات تماس</h2>
+      <div class="info-item">
+        <i class="fas fa-phone"></i>
+        <p>تلفن: 021-12345678</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <p>ایمیل: info@blog.com</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>آدرس: تهران، خیابان آزادی، پلاک ۵۵</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 تمامی حقوق محفوظ است.</p>
+    <p><a href="#">قوانین و شرایط</a> | <a href="#">حریم خصوصی</a></p>
+  </footer>
+</body>
+</html>

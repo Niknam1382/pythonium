@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جزئیات مقاله | طراحی پیشرفته و زیبا</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+            line-height: 1.8;
+        }
+
+        header {
+            background-color: #22223b;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #d4a5a5;
+        }
+
+        .article-header {
+            background: linear-gradient(to bottom right, #6a0572, #c32aa3);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-header p {
+            font-size: 1.1rem;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .article-section {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .article-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+
+        .article-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .article-section p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .tags {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .tags a {
+            text-decoration: none;
+            background: #e9d8fd;
+            color: #5a189a;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .tags a:hover {
+            background: #d4a5f6;
+        }
+
+        .related-posts {
+            margin-bottom: 3rem;
+        }
+
+        .related-posts h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .related-post-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .related-post-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .related-post-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .related-post-card .info {
+            padding: 1rem;
+        }
+
+        .related-post-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: #5a189a;
+        }
+
+        .related-post-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .comments-section {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+
+        .comments-section h2 {
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .comment-box {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+        }
+
+        .comment-box h4 {
+            font-size: 1.2rem;
+            color: #5a189a;
+            margin-bottom: 0.5rem;
+        }
+
+        .comment-box p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .comments-form textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .comments-form button {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            background: #5a189a;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .comments-form button:hover {
+            background: #3c096c;
+        }
+
+        footer {
+            background: #22223b;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #d4a5a5;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #f4bfbf;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">وبلاگ حرفه‌ای</div>
+        <nav>
+            <ul>
+                <li><a href="#">صفحه اصلی</a></li>
+                <li><a href="#">دسته‌بندی‌ها</a></li>
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#">تماس با ما</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <h1>جزئیات مقاله</h1>
+        <p>نویسنده: زهرا احمدی | تاریخ انتشار: 20 فروردین 1404</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Article Section -->
+        <div class="article-section">
+            <h2>چکیده مقاله</h2>
+            <p>این مقاله به بررسی جذاب‌ترین تکنیک‌های طراحی وبلاگ پرداخته و راه‌حل‌هایی برای بهبود تجربه کاربری ارائه
+                می‌دهد.</p>
+            <img src="https://via.placeholder.com/800x400" alt="Article Image">
+            <p>متن کامل مقاله در اینجا نوشته می‌شود. هدف این مقاله ارائه دانش کاربردی در زمینه طراحی وبلاگ و چگونگی
+                ایجاد جذابیت بیشتر برای کاربران است.</p>
+        </div>
+
+        <!-- Tags -->
+        <div class="tags">
+            <a href="#">#طراحی_وب</a>
+            <a href="#">#برنامه‌نویسی</a>
+            <a href="#">#تجربه_کاربری</a>
+        </div>
+
+        <!-- Related Posts -->
+        <div class="related-posts">
+            <h2>مطالب مرتبط</h2>
+            <div class="related-post-card">
+                <img src="https://via.placeholder.com/300x180" alt="Post">
+                <div class="info">
+                    <h3>عنوان مطلب ۱</h3>
+                    <p>توضیحات مختصر درباره مطلب مرتبط...</p>
+                </div>
+            </div>
+            <div class="related-post-card">
+                <img src="https://via.placeholder.com/300x180" alt="Post">
+                <div class="info">
+                    <h3>عنوان مطلب ۲</h3>
+                    <p>توضیحات مختصر درباره مطلب مرتبط...</p>
+                    <h3>عنوان مطلب ۳</h3>
+                    <p>توضیحات مختصر درباره مطلب مرتبط...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comments Section -->
+        <div class="comments-section">
+            <h2>نظرات کاربران</h2>
+            <div class="comment-box">
+                <h4>سارا رضایی</h4>
+                <p>این مقاله واقعا کاربردی و جذاب بود. سپاس از نویسنده.</p>
+            </div>
+            <div class="comment-box">
+                <h4>علی مرادی</h4>
+                <p>موضوعات به خوبی پوشش داده شده و توضیحات واضح است.</p>
+            </div>
+
+            <!-- Add Comment Form -->
+            <div class="comments-form">
+                <h3>اضافه کردن نظر شما</h3>
+                <textarea rows="5" placeholder="نظر خود را اینجا بنویسید..."></textarea>
+                <button>ثبت نظر</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 تمامی حقوق محفوظ است.</p>
+        <p><a href="#">قوانین و شرایط</a> | <a href="#">تماس با ما</a></p>
+    </footer>
+</body>
+
+</html>

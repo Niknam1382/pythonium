@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحه اصلی وبلاگ | طراحی کامل و بهینه‌سازی شده</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #1a202c;
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      transition: color 0.3s ease-in-out;
+    }
+
+    header nav ul li a:hover {
+      color: #63b3ed;
+    }
+
+    .hero {
+      background: linear-gradient(to bottom right, #ff7eb3, #ff758f), url('https://via.placeholder.com/1920x800') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero button {
+      background: #63b3ed;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .hero button:hover {
+      background: #2b6cb0;
+    }
+
+    .main-content {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .post-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .post-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .post-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .post-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .post-card .info {
+      padding: 1rem;
+    }
+
+    .post-card h3 {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #1a202c;
+    }
+
+    .post-card p {
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      color: #4a5568;
+    }
+
+    .newsletter {
+      background: linear-gradient(135deg, #63b3ed, #2b6cb0);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 3rem 0;
+    }
+
+    .newsletter h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .newsletter form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .newsletter input {
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: none;
+      width: 60%;
+      max-width: 350px;
+      font-size: 1rem;
+    }
+
+    .newsletter button {
+      background: #2b6cb0;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .newsletter button:hover {
+      background: #1a365d;
+    }
+
+    footer {
+      background-color: #1a202c;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 2rem;
+    }
+
+    footer a {
+      color: #63b3ed;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #e2e8f0;
+    }
+
+    @media (max-width: 768px) {
+      header nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .post-card img {
+        height: 160px;
+      }
+
+      .newsletter form {
+        flex-direction: column;
+      }
+
+      .newsletter input {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header .logo {
+        font-size: 1.5rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+
+      .post-card img {
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">وبلاگ حرفه‌ای</div>
+    <nav>
+      <ul>
+        <li><a href="#">صفحه اصلی</a></li>
+        <li><a href="#">دسته‌بندی‌ها</a></li>
+        <li><a href="#">درباره ما</a></li>
+        <li><a href="#">تماس</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>به دنیای وبلاگ خوش آمدید</h1>
+      <p>جدیدترین مقالات، اخبار و مطالب جذاب را اینجا بیابید.</p>
+      <button>مطالعه مقالات</button>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h2>آخرین مقالات</h2>
+    <div class="post-section">
+      <div class="post-card">
+        <img src="https://via.placeholder.com/300x200" alt="Post">
+        <div class="info">
+          <h3>مقاله شماره ۱</h3>
+          <p>توضیحات مختصر درباره مقاله شماره ۱. محتوایی جذاب و کاربردی برای مطالعه شما.</p>
+        </div>
+      </div>
+      <div class="post-card">
+        <img src="https://via.placeholder.com/300x200" alt="Post">
+        <div class="info">
+          <h3>مقاله شماره ۲</h3>
+          <p>توضیحات مختصر درباره مقاله شماره ۲. محتوایی جذاب و کاربردی برای مطالعه شما.</p>
+        </div>
+      </div>
+      <div class="post-card">
+        <img src="https://via.placeholder.com/300x200" alt="Post">
+        <div class="info">
+          <h3>مقاله شماره ۳</h3>
+          <p>توضیحات مختصر درباره مقاله شماره ۳. محتوایی جذاب و کاربردی برای مطالعه شما.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <h2>عضویت در خبرنامه</h2>
+    <p>ایمیل خود را وارد کنید تا جدیدترین مقالات را دریافت کنید:</p>
+    <form>
+      <input type="email" placeholder="ایمیل شما">
+      <button type="submit">ثبت‌نام</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 تمامی حقوق محفوظ است.</p>
+    <p><a href="#">قوانین و شرایط</a> | <a href="#">تماس با ما</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>درباره ما | طراحی حرفه‌ای و جذاب</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* طراحی هدر */
+    .hero {
+      background: linear-gradient(135deg, rgba(34, 193, 195, 0.9), rgba(253, 187, 45, 0.9)), url('https://via.placeholder.com/1920x1080') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .hero-btn {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      background-color: #2563eb;
+      color: white;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-btn:hover {
+      background-color: #1e40af;
+    }
+
+    /* محتوا درباره ما */
+    .content-section {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .content-section h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #2563eb;
+    }
+
+    .content-section p {
+      font-size: 1rem;
+      margin-top: 1rem;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    /* تیم ما */
+    .team-section {
+      background-color: #f3f4f6;
+      padding: 3rem 1rem;
+    }
+
+    .team-card {
+      text-align: center;
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .team-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    /* ریسپانسیو */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .team-card img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>درباره ما</h1>
+    <p>ما اینجا هستیم تا یادگیری را به شیوه‌ای مدرن و جذاب برای همه فراهم کنیم.</p>
+    <a href="#team" class="hero-btn">با تیم ما آشنا شوید</a>
+  </header>
+
+  <!-- About Section -->
+  <section class="content-section">
+    <div class="container mx-auto">
+      <h2>چشم‌انداز ما</h2>
+      <p>ما باور داریم که یادگیری یک حق همگانی است و تکنولوژی می‌تواند آن را برای همه آسان‌تر کند. هدف ما ارائه محتوای آموزشی با کیفیت، مرتبط و تاثیرگذار است.</p>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="team-section">
+    <div class="container mx-auto">
+      <h2 class="mb-8">تیم ما</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="team-card">
+          <img src="https://via.placeholder.com/100" alt="Team Member">
+          <h3 class="text-lg font-bold">علی رضایی</h3>
+          <p>مدیر عامل و بنیان‌گذار</p>
+        </div>
+        <div class="team-card">
+          <img src="https://via.placeholder.com/100" alt="Team Member">
+          <h3 class="text-lg font-bold">مریم محمدی</h3>
+          <p>مدیر فناوری</p>
+        </div>
+        <div class="team-card">
+          <img src="https://via.placeholder.com/100" alt="Team Member">
+          <h3 class="text-lg font-bold">سارا احمدی</h3>
+          <p>مدیر بازاریابی</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto text-center">
+      <p>© 2025 سایت آموزشی. تمامی حقوق محفوظ است.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

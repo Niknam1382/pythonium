@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحه 404 | صفحه یافت نشد</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #e2e8f0, #f8fafc);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .error-container {
+      max-width: 500px;
+      padding: 2rem;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .error-code {
+      font-size: 5rem;
+      font-weight: bold;
+      color: #2b6cb0;
+      margin-bottom: 1rem;
+    }
+
+    .error-message {
+      font-size: 1.5rem;
+      color: #4a5568;
+      margin-bottom: 1.5rem;
+    }
+
+    .suggestion {
+      font-size: 1rem;
+      color: #4a5568;
+      margin-bottom: 2rem;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .button {
+      background: #2b6cb0;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .button:hover {
+      background: #1a365d;
+    }
+
+    .illustration {
+      margin-bottom: 2rem;
+      animation: float 2s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .error-code {
+        font-size: 4rem;
+      }
+
+      .error-message {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <img src="https://via.placeholder.com/150" alt="404 Illustration" class="illustration">
+    <div class="error-code">404</div>
+    <div class="error-message">صفحه‌ای که به دنبال آن بودید پیدا نشد.</div>
+    <div class="suggestion">شاید لینک را اشتباه وارد کرده‌اید یا صفحه حذف شده است.</div>
+    <div class="button-container">
+      <a href="/" class="button">بازگشت به خانه</a>
+      <a href="/contact" class="button">تماس با ما</a>
+    </div>
+  </div>
+</body>
+</html>
